@@ -64,7 +64,7 @@ congress-trader/
 ```
 
 The companion **Claude Code sub-agents** (interactive IDE side) live separately —
-see the [claude-code-subagent-cookbook](https://github.com/Booboogotrizz/claude-code-subagent-cookbook)
+see the [claude-code-subagent-cookbook](https://github.com/rngauf/claude-code-subagent-cookbook)
 repo's `agents/congress/` folder.
 
 ## Watchlist
