@@ -1,0 +1,26 @@
+# Secrets
+.env
+
+# Runtime state — never commit
+state/portfolio_state.json
+state/trades.json
+state/signals.json
+state/member_state.json
+state/member_performance.json
+state/seen_trades.json
+state/options_state.json
+state/system_health.json
+state/HALT
+
+# Logs
+logs/
+
+# Python
+venv/
+.venv/
+__pycache__/
+*.pyc
+
+# OS
+.DS_Store
+Thumbs.db

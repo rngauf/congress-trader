@@ -1,0 +1,113 @@
+{
+  "priority_members": [
+    {
+      "name": "Ro Khanna",
+      "chamber": "house",
+      "party": "D",
+      "state": "CA",
+      "bioguide_id": "K000389",
+      "track_reason": "112.1% excess return vs S&P Jan 2024-Apr 2026. AI/semiconductor focus. Most active trader in Congress (4000+ trades/yr).",
+      "primary_sectors": ["technology", "semiconductors", "AI"],
+      "min_trade_amount": 15000,
+      "follow_delay_days": 1,
+      "signal_weight_multiplier": 1.5
+    },
+    {
+      "name": "Nancy Pelosi",
+      "chamber": "house",
+      "party": "D",
+      "state": "CA",
+      "bioguide_id": "P000197",
+      "track_reason": "Consistent 3-year outperformer. 2023: +65%, 2024: +70.9%, 2025: +20.1%. Tech, semis, options.",
+      "primary_sectors": ["technology", "semiconductors"],
+      "min_trade_amount": 50000,
+      "follow_delay_days": 2,
+      "signal_weight_multiplier": 1.4,
+      "notes": "Trades filed by husband Paul Pelosi. Watch for options disclosures."
+    },
+    {
+      "name": "Warren Davidson",
+      "chamber": "house",
+      "party": "R",
+      "state": "OH",
+      "bioguide_id": "D000626",
+      "track_reason": "2025 #1 performer. +78.8% vs S&P 16.6% (+62.2% beat).",
+      "primary_sectors": ["technology", "financials"],
+      "min_trade_amount": 15000,
+      "follow_delay_days": 1,
+      "signal_weight_multiplier": 1.3
+    },
+    {
+      "name": "Terri Sewell",
+      "chamber": "house",
+      "party": "D",
+      "state": "AL",
+      "bioguide_id": "S001185",
+      "track_reason": "2025 #3 performer. +67.9% vs S&P 16.6% (+51.3% beat). Consistent.",
+      "primary_sectors": ["technology", "healthcare"],
+      "min_trade_amount": 15000,
+      "follow_delay_days": 1,
+      "signal_weight_multiplier": 1.3
+    }
+  ],
+  "tier_2_members": [
+    {
+      "name": "David Rouzer",
+      "chamber": "house",
+      "party": "R",
+      "state": "NC",
+      "bioguide_id": "R000603",
+      "track_reason": "2024 +149% (mostly long-held NVDA). Still worth monitoring for new purchases.",
+      "primary_sectors": ["technology"],
+      "min_trade_amount": 15000,
+      "follow_delay_days": 2,
+      "signal_weight_multiplier": 1.0
+    },
+    {
+      "name": "Marjorie Taylor Greene",
+      "chamber": "house",
+      "party": "R",
+      "state": "GA",
+      "bioguide_id": "G000596",
+      "track_reason": "Top 10 in 2025. NVDA-focused tech trades.",
+      "primary_sectors": ["technology"],
+      "min_trade_amount": 15000,
+      "follow_delay_days": 2,
+      "signal_weight_multiplier": 1.0
+    },
+    {
+      "name": "Tommy Tuberville",
+      "chamber": "senate",
+      "party": "R",
+      "state": "AL",
+      "bioguide_id": "T000278",
+      "track_reason": "Most active Senate trader (1334+ trades). Follow equity trades only — ignore agricultural futures.",
+      "primary_sectors": ["technology", "financials"],
+      "min_trade_amount": 15000,
+      "follow_delay_days": 2,
+      "signal_weight_multiplier": 0.9,
+      "exclude_asset_types": ["agricultural_futures", "commodities"]
+    }
+  ],
+  "filters": {
+    "transaction_types": ["Purchase"],
+    "min_amount_lower_bound": 15000,
+    "exclude_mutual_funds": true,
+    "exclude_etfs": false,
+    "exclude_options_phase_1_2": true,
+    "max_days_since_transaction": 30,
+    "us_equities_only": true
+  },
+  "monthly_refresh": {
+    "enabled": true,
+    "day_of_month": "first_sunday",
+    "sources": [
+      "https://unusualwhales.com/politics",
+      "https://quiverquant.com/congresstrading",
+      "https://capitoltrades.com"
+    ],
+    "promote_threshold_sp500_beat_pct": 30,
+    "demote_threshold_sp500_beat_pct": 5,
+    "last_refreshed": "2026-04-09"
+  }
+}

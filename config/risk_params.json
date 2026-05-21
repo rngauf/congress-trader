@@ -1,0 +1,53 @@
+{
+  "equity": {
+    "paper_trading": {
+      "max_position_size_usd": 50,
+      "max_open_positions": 6,
+      "max_sector_exposure_pct": 25
+    },
+    "live_trading": {
+      "max_position_pct_of_portfolio": 10,
+      "max_open_positions": 6,
+      "max_sector_exposure_pct": 25
+    },
+    "stop_loss_pct": 8,
+    "trailing_stop_activation_pct": 15,
+    "trailing_stop_trail_pct": 8,
+    "trailing_stop_tighten_at_pct": 25,
+    "trailing_stop_tightened_trail_pct": 12,
+    "take_profit_partial_at_pct": 40,
+    "take_profit_partial_amount_pct": 50,
+    "time_exit_days": 90,
+    "min_signal_score": 60,
+    "earnings_blackout_days": 14
+  },
+  "circuit_breakers": {
+    "daily_loss_halt_pct": 3,
+    "consecutive_loss_halt_count": 3,
+    "halt_file_path": "M:\\Claude\\Agents\\congress-trader\\state\\HALT"
+  },
+  "options": {
+    "enabled": false,
+    "unlock_trigger": {
+      "min_profit_usd": 2000,
+      "min_total_portfolio_usd": 2300,
+      "description": "Options trading unlocks when portfolio hits $2,300 (initial ~$300 + $2,000 profit)"
+    },
+    "initial_allocation_pct": 10,
+    "max_allocation_pct": 20,
+    "allocation_increase_after_n_profitable_trades": 3,
+    "allocation_increase_step_pct": 2,
+    "max_position_pct_of_options_portfolio": 50,
+    "min_days_to_expiration": 45,
+    "max_strike_distance_from_price_pct": 10,
+    "drawdown_freeze_pct": 30,
+    "allowed_strategies": ["long_call"],
+    "follow_congressional_options_only": true
+  },
+  "position_scaling": {
+    "initial_live_position_pct": 10,
+    "scale_up_after_profitable_trades": 30,
+    "scale_up_increment_pct": 2,
+    "max_position_pct_ever": 20
+  }
+}
